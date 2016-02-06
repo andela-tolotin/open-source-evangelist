@@ -10,6 +10,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
  * @license  <https://opensource.org/license/MIT> MIT
  */
 
+use Exception;
 
 class EvangelistStatusException extends Exception
 {
@@ -17,10 +18,9 @@ class EvangelistStatusException extends Exception
 
 	/**
 	 * This method checkEmptyGithubusername
-	 * @param  String $username Github username
+	 * @param String $username Github username
 	 *
 	 */
-	
 	public function checkEmptyGithubUsername($username)
 	{
 		$this->username = $username;
