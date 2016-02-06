@@ -13,8 +13,8 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException as InvalidUserException;
-use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRating;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
+use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
 
 
@@ -49,7 +49,7 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
     {
         try {
 
-            $this->exception_check_invalid_username->checkEmptyGithubusername($this->username);
+            $this->exception_check_invalid_username->checkEmptyGithubUsername($this->username);
 
             $response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
             return $response->getBody();
@@ -61,12 +61,12 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 
     /**
      *  
-     * This method returns a string depending on number of user repo on Github
+     * This method returns a string depending on number of user repositories on Github
      */
     
     public function getStatus()
     {
-        $evangelistRanking = new EvangelistStatusRating();
+        $evangelistRanking = new EvangelistStatusRanking();
         return $evangelistRanking->determineEvangelistLevel($this->noOfGitRepos); 
     }
 
