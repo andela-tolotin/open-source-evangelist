@@ -16,7 +16,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
  class EvangelistStatusRanking implements EvangelistStatusRankingInterface
  {
  	private $evangelistTypeMessage;
-    private $numberOfRepo;
 
     /**
      *
@@ -34,17 +33,23 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
             return false;
         }
 
-        $this->numberOfRepo = $noOfRepo;
+    	if($noOfRepo >= 5 && $noOfRepo<= 10){
 
-    	if($this->numberOfRepo >= 5 && $this->numberOfRepo<= 10){
     		$this->evangelistTypeMessage = "Damn It!!! Please make the world better, Oh Ye Prodigal Junior Evangelist";
-    	} else if($this->numberOfRepo >= 11 && $this->numberOfRepo <= 20){
+
+    	} else if($noOfRepo >= 11 && $noOfRepo <= 20){
+
     		$this->evangelistTypeMessage = "Keep Up The Good Work, I crown you Associate Evangelist";
-    	} else if($this->numberOfRepo >= 21){
+
+    	} else if($noOfRepo >= 21){
+
     		$this->evangelistTypeMessage = "Yeah, I crown you Senior Evangelist. Thanks for making the world a better place";
+
     	}else{
+
             $this->evangelistTypeMessage = "Fuck Off!!! Please make the world better, Oh Ye Lazy Evangelist";
         }
+
     	return $this->evangelistTypeMessage;
     }
 
