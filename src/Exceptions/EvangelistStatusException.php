@@ -1,5 +1,4 @@
 <?php
-
 namespace Laztopaz\OpenSourceEvangelistStatus;
 
 /**
@@ -16,18 +15,13 @@ class EvangelistStatusException extends Exception
 {
 	private $username;
 
-	public function __construct()
-	{
-
-	}
-
 	/**
 	 * This method checkEmptyGithubusername
 	 * @param  String $username Github username
 	 *
 	 */
 	
-	public function checkEmptyGithubusername($username)
+	public function checkEmptyGithubUsername($username)
 	{
 		$this->username = $username;
 
