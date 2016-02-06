@@ -20,7 +20,7 @@ interface EvangelistStatusRankingInterface
 	 * This method returns the evangelist level 
 	 */
 	
-	public function determineEvangelistLevel();
+	public function determineEvangelistLevel($noOfRepositories);
 
 }
 
