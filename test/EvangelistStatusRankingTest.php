@@ -1,6 +1,4 @@
 <?php
-
-
 namespace Laztopaz\OpenSourceEvangelistStatus\Test;
 
 /**
@@ -13,7 +11,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus\Test;
  */
 
 use PHPUnit_Framework_TestCase;
-use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRankingTest;
+use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 
 class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 {
@@ -61,7 +59,7 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 	 */
 	public function testNumberOfReposGreaterThanTwentyOne()
 	{
-		$evangelistRating = $this->evangelistRanking->determineEvangelistLevel(23);
+		$evangelistRanking = $this->evangelistRanking->determineEvangelistLevel(23);
 		$this->assertEquals("Yeah, I crown you Senior Evangelist. Thanks for making the world a better place",$evangelistRanking);
 	}
 
