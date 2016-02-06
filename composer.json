@@ -1,0 +1,34 @@
+{
+    "name": "laztopaz/penSourceEvangelistStatus",
+    "description": "This package aims to provide an analysis based on the number of open source projects an individual possess on Github. A comprehensive README is needed.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Temitope Olotin",
+            "email": "temitope.olotin@andela.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "Laztopaz\\OpenSourceEvangelistStatus\\": "src/"
+        },
+        "classmap":["src/"]
+    },
+    "autoload-dev":{
+        "psr-4": {
+            "Laztopaz\\OpenSourceEvangelistStatus\\Test\\": "test/"
+        },
+        "classmap":["test/"]
+    },
+    "scripts":{
+        "test":"phpunit"
+        },
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "~6.0",
+        "vlucas/phpdotenv": "^2.2"
+    },
+    "require-dev":{
+        "phpunit/phpunit": "^4.8"
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Evangelist Status Test Suite" tests="1" assertions="0" failures="0" errors="1" time="0.004286">
+    <testsuite name="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/openSourceEvangelist/test/EvangelistStatustTest.php" tests="1" assertions="0" failures="0" errors="1" time="0.004286">
+      <testcase name="testUserNumberOfRepo" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/openSourceEvangelist/test/EvangelistStatustTest.php" line="35" assertions="0" time="0.004286">
+        <error type="PHPUnit_Framework_ExceptionWrapper">Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testUserNumberOfRepo
+InvalidArgumentException: Magic request methods require a URI and optional options array
+
+/Users/andeladev/Code/openSourceEvangelist/vendor/guzzlehttp/guzzle/src/Client.php:79
+/Users/andeladev/Code/openSourceEvangelist/test/EvangelistStatustTest.php:37
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
