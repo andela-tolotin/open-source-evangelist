@@ -12,6 +12,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
  use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRankingInterface;
 
+
  class EvangelistStatusRanking implements EvangelistStatusRankingInterface
  {
  	private $evangelistTypeMessage;
@@ -23,10 +24,16 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
      */
     public function __construct()
     {
+        
     }
 
     public function determineEvangelistLevel($noOfRepo)
     {
+        if($noOfRepo == "")
+        {
+            return false;
+        }
+
         $this->numberOfRepo = $noOfRepo;
 
     	if($this->numberOfRepo >= 5 && $this->numberOfRepo<= 10){
