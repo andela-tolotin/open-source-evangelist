@@ -55,7 +55,7 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
             return $response->getBody();
 
         } catch (Exception $e){
-            echo 'Caught Exception '.$e->getMessage();
+            echo 'Caught Exception '. $e->getMessage();
         }
     }
 
