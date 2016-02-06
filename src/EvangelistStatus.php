@@ -16,6 +16,7 @@ use GuzzleHttp\Client;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRating;
 use GuzzleHttp\Exception\RequestException as InvalidUserException;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
+use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
 
 
 class EvangelistStatus extends Client implements EvangelistStatusInterface
@@ -33,6 +34,8 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 
         $this->guzzle_client    = new Client();
 
+        $this->exception_class  = new EvangelistStatusException();
+
         $this->username         = $username;
 
         $this->githubResponse   = $this->getGitApiData(); // return GitHub jsonObject
@@ -46,8 +49,16 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 
     public function getGitApiData()
     {
-        $response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
-       return $response->getBody();
+        try {
+
+            $this->exception_class->checkEmptyGithubusername($this->username);
+
+            $response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
+            return $response->getBody();
+
+        } catch (Exception $e){
+            echo $e->getMessage();
+        }
     }
 
     /**
