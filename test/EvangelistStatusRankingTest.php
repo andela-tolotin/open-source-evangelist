@@ -19,7 +19,7 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 {
 	public function setUp()
 	{
-		$this->evangelistRanking = new EvangelistStatusRanking()
+		$this->evangelistRanking = new EvangelistStatusRanking();
 	}
 	/**
 	 * 
