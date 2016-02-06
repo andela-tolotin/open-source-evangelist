@@ -34,7 +34,7 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 
         $this->guzzle_client    = new Client();
 
-        $this->exception_class  = new EvangelistStatusException();
+        $this->exception_check_invalid_username  = new EvangelistStatusException();
 
         $this->username         = $username;
 
@@ -51,7 +51,7 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
     {
         try {
 
-            $this->exception_class->checkEmptyGithubusername($this->username);
+            $this->exception_check_invalid_username->checkEmptyGithubusername($this->username);
 
             $response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
             return $response->getBody();
