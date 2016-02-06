@@ -1,5 +1,4 @@
 <?php
-
 namespace Laztopaz\OpenSourceEvangelistStatus;
 
 /**
@@ -13,33 +12,32 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
-use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRating;
 use GuzzleHttp\Exception\RequestException as InvalidUserException;
+use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRating;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
 
 
 class EvangelistStatus extends Client implements EvangelistStatusInterface
-
 {
 	private    $username;
 	protected  $githubApi;
 	
     public function __construct($username)
     {
-        $env                    = new Dotenv($_SERVER['DOCUMENT_ROOT']);
+        $env                                     = new Dotenv($_SERVER['DOCUMENT_ROOT']);
         
-        $this->client_id        = getenv('ClientID'); // get the GitHub client id
-        $this->client_secret    = getenv('ClientSecret'); // get the GitHub client secret
+        $this->client_id                         = getenv('ClientID'); // get the GitHub client id
+        $this->client_secret                     = getenv('ClientSecret'); // get the GitHub client secret
 
-        $this->guzzle_client    = new Client();
+        $this->guzzle_client                     = new Client();
 
         $this->exception_check_invalid_username  = new EvangelistStatusException();
 
-        $this->username         = $username;
+        $this->username                          = $username;
 
-        $this->githubResponse   = $this->getGitApiData(); // return GitHub jsonObject
-        $this->noOfGitRepos     = $this->getNumberOfRepos(); // return number of repo the user has
+        $this->githubResponse                    = $this->getGitApiData(); // return GitHub jsonObject
+        $this->noOfGitRepos                      = $this->getNumberOfRepos(); // return number of repo the user has
     }
 
     /**
@@ -82,7 +80,5 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
         $githubJson = json_decode($this->githubResponse,true);
         return $githubJson['public_repos'];
     }
-
-    // 0044074026
 
 }  
