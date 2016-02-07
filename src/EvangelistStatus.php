@@ -16,12 +16,14 @@ use GuzzleHttp\Exception\RequestException as InvalidUserException;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
+use Exception;
 
 
 class EvangelistStatus extends Client implements EvangelistStatusInterface
 {
 	private    $username;
 	protected  $githubApi;
+    private $response;
 	
     public function __construct($username)
     {
@@ -51,23 +53,13 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 
             $this->exception_check_invalid_username->checkEmptyGithubUsername($this->username);
 
-            $response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
-            return $response->getBody();
-
-        } catch (Exception $e){
+            $this->response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
+            return $this->response->getBody();
+        } 
+        catch (Exception $e)
+        {
             echo 'Caught Exception '. $e->getMessage();
         }
-    }
-
-    /**
-     *  
-     * This method returns a string depending on number of user repositories on Github
-     */
-    
-    public function getStatus()
-    {
-        $evangelistRanking = new EvangelistStatusRanking();
-        return $evangelistRanking->determineEvangelistLevel($this->noOfGitRepos); 
     }
 
     /**
@@ -80,5 +72,17 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
         $githubJson = json_decode($this->githubResponse,true);
         return $githubJson['public_repos'];
     }
+    /**
+     *  
+     * This method returns a string depending on number of user repositories on Github
+     */
+    
+    public function getStatus()
+    {
+        $evangelistRanking = new EvangelistStatusRanking();
+        return $evangelistRanking->determineEvangelistLevel($this->noOfGitRepos); 
+    }
+
+    
 
 }  
