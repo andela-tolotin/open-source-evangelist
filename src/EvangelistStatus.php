@@ -23,7 +23,13 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 {
     private    $username;
 	protected  $githubApi;
-    private $response;
+    private    $response;
+    private    $client_id;
+    private    $client_secret;
+    private    $guzzle_client;
+    private    $exception_check_invalid_username;
+    private    $githubResponse;
+    private    $noOfGitRepos;
 	
     public function __construct($username)
     {
