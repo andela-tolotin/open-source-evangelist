@@ -1,6 +1,6 @@
 **php-coveralls**  
 -
-[![Coverage Status](https://coveralls.io/repos/github/andela-tolotin/open-source-evangelist/badge.svg?branch=evangelist)](https://coveralls.io/github/andela-tolotin/open-source-evangelist?branch=evangelist)
+[![Test Coverage](https://codeclimate.com/github/andela-tolotin/open-source-evangelist/badges/coverage.svg)](https://codeclimate.com/github/andela-tolotin/open-source-evangelist/coverage)
 
 [![Circle CI](https://circleci.com/gh/andela-tolotin/open-source-evangelist.svg?style=svg)](https://circleci.com/gh/andela-tolotin/open-source-evangelist)
 
