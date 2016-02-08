@@ -1,4 +1,4 @@
-**php-coveralls**
+**php-coveralls**  
 -
 [![Circle CI](https://circleci.com/gh/andela-tolotin/open-source-evangelist.svg?style=svg)](https://circleci.com/gh/andela-tolotin/open-source-evangelist)
 
