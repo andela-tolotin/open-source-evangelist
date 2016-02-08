@@ -59,8 +59,8 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
             $this->response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->client_id .'&client_secret='.$this->client_secret);
             return $this->response->getBody();
         } 
-        catch (Exception $e)
-        {
+        catch (Exception $e){
+            
             echo 'Caught Exception '.$e->getMessage();
         }
     }
