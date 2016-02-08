@@ -19,12 +19,12 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 	{
 		$this->evangelistRanking = new EvangelistStatusRanking();
 	}
+
 	/**
 	 * 
 	 * This method testNumberOfReposLessThanFive
 	 * 
 	 */
-	
 	public function testNumberOfReposLessThanFive()
 	{
 		$evangelistRanking = $this->evangelistRanking->determineEvangelistLevel(3);
@@ -62,5 +62,4 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 		$evangelistRanking = $this->evangelistRanking->determineEvangelistLevel(23);
 		$this->assertEquals("Yeah, I crown you Senior Evangelist. Thanks for making the world a better place",$evangelistRanking);
 	}
-
 }
