@@ -32,9 +32,7 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
     private    $noOfGitRepos;
 	
     public function __construct($username)
-    {
-        //$env                                     = new Dotenv($_SERVER['DOCUMENT_ROOT']);
-        
+    {   
         $this->client_id                         = getenv('ClientID'); // get the GitHub client id
         $this->client_secret                     = getenv('ClientSecret'); // get the GitHub client secret
 
