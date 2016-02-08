@@ -1,3 +1,8 @@
 TAP version 13
-not ok 1 - Error: Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testUserNumberOfRepo
-1..1
+ok 1 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposLessThanFive
+ok 2 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposGreaterThanFiveAndLessOrEqualTen
+ok 3 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposGreaterThanTenAndLessOrEqualTwenty
+ok 4 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposGreaterThanTwentyOne
+ok 5 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testUserNumberOfRepo
+ok 6 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitResponseData
+1..6
