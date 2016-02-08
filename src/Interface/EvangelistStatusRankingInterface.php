@@ -1,7 +1,5 @@
 <?php
-
 namespace Laztopaz\OpenSourceEvangelistStatus;
-
 /**
  *
  * EvangelistStatusRankingInterface  class
@@ -12,10 +10,8 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
  */
 
 interface EvangelistStatusRankingInterface
-
 {
-
-	/**
+    /**
 	 *
 	 * This method returns the evangelist level 
 	 */
@@ -23,5 +19,3 @@ interface EvangelistStatusRankingInterface
 	public function determineEvangelistLevel($noOfRepositories);
 
 }
-
-?>
