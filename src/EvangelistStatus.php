@@ -12,7 +12,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
-//use GuzzleHttp\Exception\RequestException as InvalidUserException;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
