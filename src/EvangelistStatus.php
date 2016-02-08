@@ -21,8 +21,8 @@ use Exception;
 
 class EvangelistStatus extends Client implements EvangelistStatusInterface
 {
+    protected  $githubApi;
     private    $username;
-	protected  $githubApi;
     private    $response;
     private    $client_id;
     private    $client_secret;
