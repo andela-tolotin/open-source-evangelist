@@ -1,5 +1,4 @@
 <?php
-
 namespace Laztopaz\OpenSourceEvangelistStatus\Test;
 
 /**
@@ -32,9 +31,10 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
      *
      * Check if the number of repos return is an int
      */
+    
     public function testUserNumberOfRepo()
     {
-    	$status = $this->evangelist->getNumberOfRepo();
+    	$status = $this->evangelist->getNumberOfRepos();
     	$this->assertInternalType('int',$status);
     }
 
@@ -47,13 +47,6 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
     public function testGitResponseData()
     {
         $returnDataType = $this->evangelist->getGitApiData();
-        $this->assertNotNul($returnDataType);
+        $this->assertNotEmpty($returnDataType);
     }
-
-
-
-
 }
-
-
-?>
