@@ -1,5 +1,4 @@
 <?php
-
 namespace Laztopaz\OpenSourceEvangelistStatus;
 
 /**
@@ -17,7 +16,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
  */
 
 interface EvangelistStatusInterface
-
 {
     /**
      *  
