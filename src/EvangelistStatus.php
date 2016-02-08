@@ -12,7 +12,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException as InvalidUserException;
+//use GuzzleHttp\Exception\RequestException as InvalidUserException;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
@@ -21,7 +21,7 @@ use Exception;
 
 class EvangelistStatus extends Client implements EvangelistStatusInterface
 {
-	private    $username;
+    private    $username;
 	protected  $githubApi;
     private $response;
 	
@@ -53,12 +53,12 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
 
             $this->exception_check_invalid_username->checkEmptyGithubUsername($this->username);
 
-            $this->response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='. $this->client_id .'&client_secret='.$this->client_secret);
+            $this->response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->client_id .'&client_secret='.$this->client_secret);
             return $this->response->getBody();
         } 
         catch (Exception $e)
         {
-            echo 'Caught Exception '. $e->getMessage();
+            echo 'Caught Exception '.$e->getMessage();
         }
     }
 
@@ -69,7 +69,7 @@ class EvangelistStatus extends Client implements EvangelistStatusInterface
     
     public function getNumberOfRepos()
     {
-        $githubJson = json_decode($this->githubResponse,true);
+        $githubJson = json_decode($this->githubResponse, true);
         return $githubJson['public_repos'];
     }
     /**
