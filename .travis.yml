@@ -12,8 +12,6 @@ matrix:
   allow_failures:
     - php: 7.0
     - php: hhvm
-before_install:
-  - composer install --dev
 
 install:
   - curl -s http://getcomposer.org/installer | php
