@@ -15,7 +15,11 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
  class EvangelistStatusRanking implements EvangelistStatusRankingInterface
  {
-
+    /**
+     * This method ranks GitHub users based on the number of repositories they have
+     * @param  int $noOfRepo
+     * @return String $evangelistTypeMessage
+     */
     public function determineEvangelistLevel($noOfRepo)
     {
         if ($noOfRepo == "") {
