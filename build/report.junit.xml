@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Evangelist Status Test Suite" tests="6" assertions="6" failures="0" errors="0" time="2.936275">
-    <testsuite name="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" tests="4" assertions="4" failures="0" errors="0" time="0.245576">
-      <testcase name="testNumberOfReposLessThanFive" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="28" assertions="1" time="0.245255"/>
-      <testcase name="testNumberOfReposGreaterThanFiveAndLessOrEqualTen" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="39" assertions="1" time="0.000161"/>
-      <testcase name="testNumberOfReposGreaterThanTenAndLessOrEqualTwenty" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="49" assertions="1" time="0.000087"/>
-      <testcase name="testNumberOfReposGreaterThanTwentyOne" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="60" assertions="1" time="0.000073"/>
+  <testsuite name="Evangelist Status Test Suite" tests="6" assertions="6" failures="0" errors="0" time="2.034279">
+    <testsuite name="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" tests="4" assertions="4" failures="0" errors="0" time="0.000856">
+      <testcase name="testNumberOfReposLessThanFive" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="28" assertions="1" time="0.000624"/>
+      <testcase name="testNumberOfReposGreaterThanFiveAndLessOrEqualTen" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="39" assertions="1" time="0.000090"/>
+      <testcase name="testNumberOfReposGreaterThanTenAndLessOrEqualTwenty" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="49" assertions="1" time="0.000072"/>
+      <testcase name="testNumberOfReposGreaterThanTwentyOne" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusRankingTest.php" line="60" assertions="1" time="0.000070"/>
     </testsuite>
-    <testsuite name="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusTest.php" tests="2" assertions="2" failures="0" errors="0" time="2.690699">
-      <testcase name="testUserNumberOfRepo" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusTest.php" line="35" assertions="1" time="1.710974"/>
-      <testcase name="testGitResponseData" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusTest.php" line="47" assertions="1" time="0.979725"/>
+    <testsuite name="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusTest.php" tests="2" assertions="2" failures="0" errors="0" time="2.033423">
+      <testcase name="testUserNumberOfRepo" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusTest.php" line="35" assertions="1" time="1.093286"/>
+      <testcase name="testGitResponseData" class="Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest" file="/Users/andeladev/Code/open-source-evangelist/test/EvangelistStatusTest.php" line="47" assertions="1" time="0.940137"/>
     </testsuite>
   </testsuite>
 </testsuites>
