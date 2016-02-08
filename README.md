@@ -54,7 +54,7 @@ On your terminal run.
      $ composer test or phpunit test
 **Contributing**
 -
-To contribute and extend the scope of this package, Please check out CONTRIBUTING file for detailed [contribution](https://github.com/andela-tolotin/open-source-evangelist/contribution.md) guidelines.
+To contribute and extend the scope of this package, Please check out CONTRIBUTING file for detailed [contribution](https://github.com/andela-tolotin/open-source-evangelist/blob/evangelist/contribution.md) guidelines.
 
 **Credits**
 -
