@@ -1,4 +1,5 @@
 [![Circle CI](https://circleci.com/gh/andela-tolotin/open-source-evangelist.svg?style=svg)](https://circleci.com/gh/andela-tolotin/open-source-evangelist)
+
 This package aims to provide an analysis based on the number of open source projects an individual possess on Github. It also, rank GitHub users based on number of repositories they have. Below are the ranking;
 
     Number of repository < 5 : Lazy Evangelist.
