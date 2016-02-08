@@ -1,7 +1,7 @@
 coverage_clover: build/logs/clover.xml
-repo_token: 4621be82c391b15ab9416b68655ea39cd09e95f1
+repo_token: qDFtQJvmNLrUuGl0oKQwZfQp62JJOulcT
 
-service_name: travis-ci # travis-ci or travis-pro
+service_name: travis-pro # travis-ci or travis-pro
 
 # for php-coveralls
 coverage_clover: build/logs/clover.xml
