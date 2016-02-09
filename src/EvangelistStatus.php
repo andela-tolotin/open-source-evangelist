@@ -1,10 +1,10 @@
 <?php
+
 namespace Laztopaz\OpenSourceEvangelistStatus;
 
+error_reporting(0);
+
 /**
- *
- * EvangelistStatus class
- * 
  * @package  Laztopaz\OpenSourceEvangelistStatus
  * @author   Temitope Olotin <temitope.olotin@andela.com>
  * @license  <https://opensource.org/license/MIT> MIT
@@ -15,77 +15,101 @@ use GuzzleHttp\Client;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusInterface;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
+use Laztopaz\OpenSourceEvangelistStatus\NullNoOfReposException;
+use Laztopaz\OpenSourceEvangelistStatus\ArgumentCheckException;
 use Exception;
 
 
-class EvangelistStatus extends Client implements EvangelistStatusInterface
+class EvangelistStatus implements EvangelistStatusInterface
 {
     protected  $githubApi;
     private    $username;
     private    $response;
-    private    $client_id;
-    private    $client_secret;
-    private    $guzzle_client;
-    private    $exception_check_invalid_username;
+    private    $clientId;
+    private    $clientSecret;
+    private    $guzzleClient;
+    private    $exceptionCheckInvalidUsername;
     private    $githubResponse;
     private    $noOfGitRepos;
 	
     public function __construct($username)
-    {   
-        $this->client_id                         = getenv('ClientID'); // get the GitHub client id
-        $this->client_secret                     = getenv('ClientSecret'); // get the GitHub client secret
+    { 
+        $num_args = (int) func_num_args();
 
-        $this->guzzle_client                     = new Client();
+        if ($num_args == 0 ||  $num_args > 1)
+        {
+            throw ArgumentCheckException::NullOfOverflowArgumentException("Argument missing: only one argument is allowed");
+        }
 
-        $this->exception_check_invalid_username  = new EvangelistStatusException();
+        if (self::checkEmptyGithubUsername($username))
+        {
+            throw EvangelistStatusException::createEvangelistStatusException("Username is Empty, please provide a GitHub valid username");
+        }
 
-        $this->username                          = $username;
+        $this->username                         = $username;
 
-        $this->githubResponse                    = $this->getGitApiData(); // return GitHub jsonObject
-        $this->noOfGitRepos                      = $this->getNumberOfRepos(); // return number of repo the user has
+        $this->clientId                         = getenv('ClientID'); // get the GitHub client id
+        $this->clientSecret                     = getenv('ClientSecret'); // get the GitHub client secret
+
+        $this->guzzleClient                     = new Client();
+
+        $this->githubResponse                   = $this->getGitApiData(); // return GitHub jsonObject
+        $this->noOfGitRepos                     = $this->getNumberOfRepos(); // return number of repo the user has
     }
 
     /**
-     * 
-     * This method returns Github data
+     * This method returns Github JSON data 
+     * @param    void
+     * @return   response 
      */
-
     public function getGitApiData()
     {
-        try {
-
-            $this->exception_check_invalid_username->checkEmptyGithubUsername($this->username);
-
-            $this->response = $this->guzzle_client->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->client_id .'&client_secret='.$this->client_secret);
-            return $this->response->getBody();
-        } 
-        catch (Exception $e){
+        $this->response = $this->guzzleClient->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->clientId .'&client_secret='.$this->clientSecret);
             
-            echo 'Caught Exception '.$e->getMessage();
-        }
+            return $this->response->getBody();
     }
 
     /**
-     * 
      * This method returns number of the user repo on Github
+     * @param void
+     * @return int public_repos
      */
-    
     public function getNumberOfRepos()
     {
         $githubJson = json_decode($this->githubResponse, true);
+        
         return $githubJson['public_repos'];
     }
+
     /**
-     *  
      * This method returns a string depending on number of user repositories on Github
+     * @param void 
+     * @return  string $evangelistRanking
      */
-    
     public function getStatus()
     {
         $evangelistRanking = new EvangelistStatusRanking();
+
+        if($evangelistRanking->checkForNullRepos($this->noOfGitRepos))
+        {
+            throw NullNoOfReposException::createNullReposException("Empty GitHub repository");
+        }
+
         return $evangelistRanking->determineEvangelistLevel($this->noOfGitRepos); 
     }
 
-    
+    /**
+     * This method checks for empty GitHub username
+     * @param string $username
+     * @return boolean
+     */
+    public function checkEmptyGithubUsername($username)
+    {
+        if ($username == "")
+        {
+            return true;
+        }
+        return false;
+    }
 
 }  
