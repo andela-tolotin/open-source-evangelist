@@ -83,7 +83,7 @@ class EvangelistStatus implements EvangelistStatusInterface
     /**
      * This method returns a string depending on number of user repositories on Github
      * @param void 
-     * @return  string $evangelistRanking
+     * @return  string evangelistRanking
      */
     public function getStatus()
     {
