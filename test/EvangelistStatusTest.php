@@ -1,4 +1,5 @@
 <?php
+
 namespace Laztopaz\OpenSourceEvangelistStatus\Test;
 
 /**
@@ -19,8 +20,9 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
     private $evangelist;
 	
 	/**
-	 *
 	 * Class Instantiation of the EvangelistStatus class
+     * @param void
+     * @return object
 	 */
     public function setUp()
     {
@@ -28,10 +30,10 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     *
      * Check if the number of repos return is an int
+     * @param void
+     * @return boolean
      */
-    
     public function testUserNumberOfRepo()
     {
     	$status = $this->evangelist->getNumberOfRepos();
@@ -39,11 +41,10 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     *
-     * check if the return value of GitHub Api is Object
-     *
+     * Check if the return value of GitHub Api is Object
+     * @param void
+     * @return boolean
      */
-    
     public function testGitResponseData()
     {
         $returnDataType = $this->evangelist->getGitApiData();

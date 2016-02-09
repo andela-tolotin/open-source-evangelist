@@ -1,4 +1,5 @@
 <?php
+
 namespace Laztopaz\OpenSourceEvangelistStatus\Test;
 
 /**
@@ -21,9 +22,9 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * 
-	 * This method testNumberOfReposLessThanFive
-	 * 
+	 *This method testNumberOfReposLessThanFive
+	 * @param void 
+	 * @return boolean
 	 */
 	public function testNumberOfReposLessThanFive()
 	{
@@ -32,9 +33,10 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * 
-	 * This method testNumberOfReposGreaterThanFiveAndLessOrEqualTen
-	 * 
+	 *This method testNumberOfReposGreaterThanFiveAndLessOrEqualTen
+	 **This method testNumberOfReposLessThanFive
+	 * @param void 
+	 * @return boolean
 	 */
 	public function testNumberOfReposGreaterThanFiveAndLessOrEqualTen()
 	{
@@ -44,7 +46,9 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * This method testNumberOfReposGreaterThanTenAndLessOrEqualTwenty
-	 * 
+	 * *This method testNumberOfReposLessThanFive
+	 * @param void 
+	 * @return boolean
 	 */
 	public function testNumberOfReposGreaterThanTenAndLessOrEqualTwenty()
 	{
@@ -53,9 +57,10 @@ class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * 
 	 * This method testNumberOfReposGreaterThanTwentyOne
-	 * 
+	 * *This method testNumberOfReposLessThanFive
+	 * @param void 
+	 * @return boolean
 	 */
 	public function testNumberOfReposGreaterThanTwentyOne()
 	{
