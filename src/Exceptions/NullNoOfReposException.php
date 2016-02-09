@@ -12,15 +12,15 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
 use Exception;
 
-class EvangelistStatusException extends Exception
+class NullNoOfReposException extends Exception
 {
     /**
 	 * This method return an instance of an exception
-	 * @param message
+	 * @param $exception
 	 * @return message
 	 */
-	public static function createEvangelistStatusException($message)
+	public static function createNullReposException($exception)
 	{
-		return new static($message);
+		return new static($exception);
 	}
 }
