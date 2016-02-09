@@ -71,7 +71,7 @@ class EvangelistStatus implements EvangelistStatusInterface
     /**
      * This method returns number of the user repo on Github
      * @param void
-     * @return int public_repos
+     * @return public_repos
      */
     public function getNumberOfRepos()
     {
