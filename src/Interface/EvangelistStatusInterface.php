@@ -1,4 +1,5 @@
 <?php
+
 namespace Laztopaz\OpenSourceEvangelistStatus;
 
 /**
@@ -18,21 +19,24 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 interface EvangelistStatusInterface
 {
     /**
-     *  
-     * This method returns a string depending on number of user repo on Github
+     *This method returns a string depending on number of user repo on Github
+     * @param void
+     * @return void
      */
 	public function getStatus();
 
 	/**
-     * 
      * This method returns number of the user repo on Github
+     * @param void
+     * @return void
      */
 	public function getNumberOfRepos();
 
 
     /**
-     * 
      * This method returns Github data
+     * @param void
+     * @return void
      */
     public function getGitApiData();
 }
