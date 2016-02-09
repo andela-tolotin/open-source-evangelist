@@ -28,7 +28,6 @@ class EvangelistStatus implements EvangelistStatusInterface
     private    $clientId;
     private    $clientSecret;
     private    $guzzleClient;
-    private    $exceptionCheckInvalidUsername;
     private    $githubResponse;
     private    $noOfGitRepos;
 	
