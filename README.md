@@ -1,8 +1,7 @@
 **Open Source Evangelist**  
 -
 [![Coverage Status](https://coveralls.io/repos/github/andela-tolotin/open-source-evangelist/badge.svg?branch=evangelist)](https://coveralls.io/github/andela-tolotin/open-source-evangelist?branch=evangelist)
-[![Build Status](https://travis-ci.org/andela-tolotin/open-source-evangelist.svg?branch=evangelist)](https://travis-ci.org/andela-tolotin/open-source-evangelist)[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/quality-score.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/?branch=evangelist) 
-
+[![Build Status](https://travis-ci.org/andela-tolotin/open-source-evangelist.svg?branch=evangelist)](https://travis-ci.org/andela-tolotin/open-source-evangelist) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/quality-score.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/?branch=evangelist) 
 This package aims to provide an analysis based on the number of open source projects an individual possess on Github. It also, rank GitHub users based on number of repositories they have. Below are the ranking;
 
     Number of repository < 5 : Lazy Evangelist.
