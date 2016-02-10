@@ -30,7 +30,6 @@
         "satooshi/php-coveralls": "^1.0"
     },
     "require-dev":{
-        "phpunit/phpunit": "^4.8.22",
-         "codeclimate/php-test-reporter": "dev-master"
+        "phpunit/phpunit": "^4.8.22"
     }
 }
