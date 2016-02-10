@@ -41,7 +41,7 @@ To catch exception in case the GitHub username is not provided or invalid.
  
 
     use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatus;
-    use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusException;
+  
     try {
         $status = new EvangelistStatus($github_username);
         echo $status->getStatus();
