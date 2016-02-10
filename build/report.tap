@@ -6,4 +6,5 @@ ok 4 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::tes
 ok 5 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testUserNumberOfRepo
 ok 6 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitResponseData
 ok 7 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitHubUsernameEmpty
-1..7
+ok 8 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGetStatus
+1..8

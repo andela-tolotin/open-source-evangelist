@@ -14,6 +14,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus\Test;
 
 use PHPUnit_Framework_TestCase;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatus;
+use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
 
 class EvangelistStatusTest extends PHPUnit_Framework_TestCase
 {
@@ -60,5 +61,18 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
     {
         $bool_truth = $this->evangelist->checkEmptyGithubUsername("");
         $this->assertTrue($bool_truth);
+    }
+
+    /**
+     * check the status of user
+     * @param void 
+     * @return  string 
+     */
+    
+    public function testGetStatus()
+    {
+        $status = EvangelistStatusRanking::determineEvangelistLevel(5); 
+        $this->assertEquals($status,"Damn It!!! Please make the world better, Oh Ye Prodigal Junior Evangelist");
+
     }
 }
