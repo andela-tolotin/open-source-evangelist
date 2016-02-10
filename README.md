@@ -1,7 +1,7 @@
 **Open Source Evangelist**  
 -
 [![Coverage Status](https://coveralls.io/repos/github/andela-tolotin/open-source-evangelist/badge.svg?branch=evangelist)](https://coveralls.io/github/andela-tolotin/open-source-evangelist?branch=evangelist)
-[![Circle CI](https://circleci.com/gh/andela-tolotin/open-source-evangelist.svg?style=svg)](https://circleci.com/gh/andela-tolotin/open-source-evangelist) [![Code Climate](https://codeclimate.com/github/andela-tolotin/open-source-evangelist/badges/gpa.svg)](https://codeclimate.com/github/andela-tolotin/open-source-evangelist) [![Build Status](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/build.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/build-status/evangelist) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/quality-score.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/?branch=evangelist) 
+[![Circle CI](https://circleci.com/gh/andela-tolotin/open-source-evangelist.svg?style=svg)](https://circleci.com/gh/andela-tolotin/open-source-evangelist) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/quality-score.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/?branch=evangelist) 
 
 This package aims to provide an analysis based on the number of open source projects an individual possess on Github. It also, rank GitHub users based on number of repositories they have. Below are the ranking;
 
