@@ -13,6 +13,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus\Test;
 
 use PHPUnit_Framework_TestCase;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
+use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatus;
 
 class EvangelistStatusRankingTest extends PHPUnit_Framework_TestCase
 {

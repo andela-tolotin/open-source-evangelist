@@ -50,4 +50,15 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
         $returnDataType = $this->evangelist->getGitApiData();
         $this->assertNotEmpty($returnDataType);
     }
+
+    /**
+     * Check if GitHub username is empty
+     * @param void
+     * @return void
+     */
+    public function testGitHubUsernameEmpty()
+    {
+        $bool_truth = $this->evangelist->checkEmptyGithubUsername("");
+        $this->assertTrue($bool_truth);
+    }
 }
