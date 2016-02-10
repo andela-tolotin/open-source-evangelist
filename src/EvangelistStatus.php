@@ -64,7 +64,11 @@ class EvangelistStatus implements EvangelistStatusInterface
     public function getGitApiData()
     {
         $this->response = $this->guzzleClient->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->clientId .'&client_secret='.$this->clientSecret);
+<<<<<<< HEAD
     
+=======
+            
+>>>>>>> 6effe2974cda556bb4f470765a66a3c38e8a1dbe
         return $this->response->getBody();
     }
 
