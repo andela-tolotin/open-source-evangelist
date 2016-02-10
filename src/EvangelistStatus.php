@@ -64,8 +64,8 @@ class EvangelistStatus implements EvangelistStatusInterface
     public function getGitApiData()
     {
         $this->response = $this->guzzleClient->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->clientId .'&client_secret='.$this->clientSecret);
-            
-            return $this->response->getBody();
+    
+        return $this->response->getBody();
     }
 
     /**
@@ -76,6 +76,11 @@ class EvangelistStatus implements EvangelistStatusInterface
     public function getNumberOfRepos()
     {
         $githubJson = json_decode($this->githubResponse, true);
+
+        if(EvangelistStatusRanking::checkForNullRepos($githubJson))
+        {
+            throw NullNoOfReposException::createNullReposException("Empty GitHub repository");
+        }
         
         return $githubJson['public_repos'];
     }
@@ -89,12 +94,7 @@ class EvangelistStatus implements EvangelistStatusInterface
     {
         $evangelistRanking = new EvangelistStatusRanking();
 
-        if($evangelistRanking->checkForNullRepos($this->noOfGitRepos))
-        {
-            throw NullNoOfReposException::createNullReposException("Empty GitHub repository");
-        }
-
-        return $evangelistRanking->determineEvangelistLevel($this->noOfGitRepos); 
+        return EvangelistStatusRanking::determineEvangelistLevel($this->noOfGitRepos); 
     }
 
     /**

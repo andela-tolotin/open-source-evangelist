@@ -21,7 +21,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
      * @param  int $noOfRepo
      * @return String $evangelistTypeMessage
      */
-    public function determineEvangelistLevel($noOfRepo)
+    public static function determineEvangelistLevel($noOfRepo)
     {
     	if ($noOfRepo >= 5 && $noOfRepo<= 10) {
     		$evangelistTypeMessage = "Damn It!!! Please make the world better, Oh Ye Prodigal Junior Evangelist";
@@ -38,12 +38,12 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
     /**
      * This method check for null repos
-     * @param int  $noOfRepo
+     * @param array  $arrayResponse
      * @return boolean
      */
-    public function checkForNullRepos($noOfRepo)
+    public static function checkForNullRepos($arrayResponse)
     {
-        if ($noOfRepo == "") {
+        if ($arrayResponse["message"] == "Not Found") {
             return true;
         }
 

@@ -18,7 +18,13 @@ interface EvangelistStatusRankingInterface
 	 * @param void
      * @return void
 	 */
-	
-	public function determineEvangelistLevel($noOfRepositories);
+	public static function determineEvangelistLevel($noOfRepositories);
+
+	/**
+	 * [checkForNullRepos description]
+	 * @param  array $jsonBody
+	 * @return boolean
+	 */
+	public static function checkForNullRepos($jsonBody);
 
 }
