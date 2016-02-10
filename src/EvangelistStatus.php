@@ -65,7 +65,7 @@ class EvangelistStatus implements EvangelistStatusInterface
     {
         $this->response = $this->guzzleClient->get('https://api.github.com/users/'.$this->username.'?client_id='.$this->clientId .'&client_secret='.$this->clientSecret);
             
-            return $this->response->getBody();
+        return $this->response->getBody();
     }
 
     /**
