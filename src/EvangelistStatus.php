@@ -91,8 +91,6 @@ class EvangelistStatus implements EvangelistStatusInterface
      */
     public function getStatus()
     {
-        $evangelistRanking = new EvangelistStatusRanking();
-
         return EvangelistStatusRanking::determineEvangelistLevel($this->noOfGitRepos); 
     }
 
