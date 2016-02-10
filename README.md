@@ -1,4 +1,4 @@
-**php-coveralls**  
+**Open Source Evangelist **  
 -
 
 [![Circle CI](https://circleci.com/gh/andela-tolotin/open-source-evangelist.svg?style=svg)](https://circleci.com/gh/andela-tolotin/open-source-evangelist) [![Code Climate](https://codeclimate.com/github/andela-tolotin/open-source-evangelist/badges/gpa.svg)](https://codeclimate.com/github/andela-tolotin/open-source-evangelist) [![Build Status](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/build.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/build-status/evangelist) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/badges/quality-score.png?b=evangelist)](https://scrutinizer-ci.com/g/andela-tolotin/open-source-evangelist/?branch=evangelist)
