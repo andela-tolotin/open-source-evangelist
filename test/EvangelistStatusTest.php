@@ -28,6 +28,7 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
     	$this->evangelist = new EvangelistStatus('andela-tolotin');
+        $this->ranking = new EvangelistStatusRanking();
     }
 
     /**
@@ -68,11 +69,22 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
      * @param void 
      * @return  string 
      */
-    
+    public function testEvangelistLevel()
+    {
+        $status = $this->ranking->determineEvangelistLevel(5); 
+        $this->assertEquals($status,"Damn It!!! Please make the world better, Oh Ye Prodigal Junior Evangelist");
+    }
+
+    /**
+     * check the status of user
+     * @param void 
+     * @return  string 
+     */
     public function testGetStatus()
     {
-        $status = EvangelistStatusRanking::determineEvangelistLevel(5); 
-        $this->assertEquals($status,"Damn It!!! Please make the world better, Oh Ye Prodigal Junior Evangelist");
+        $ranking = $this->ranking->determineEvangelistLevel($this->evangelist->getNumberOfRepos());
+        $status = $this->evangelist->getStatus(); 
+        $this->assertEquals($ranking,$status);
 
     }
 }
