@@ -40,12 +40,9 @@ class EvangelistStatus implements EvangelistStatusInterface
             throw ArgumentCheckException::NullOfOverflowArgumentException("Argument missing: only one argument is allowed");
         }
 
-        if (self::checkEmptyGithubUsername($username))
-        {
-            throw EvangelistStatusException::createEvangelistStatusException("Username is Empty, please provide a GitHub valid username");
-        }
-
         $this->username                         = $username;
+
+        $this->checkNullUsernameException();
 
         $this->clientId                         = getenv('ClientID'); // get the GitHub client id
         $this->clientSecret                     = getenv('ClientSecret'); // get the GitHub client secret
@@ -108,4 +105,15 @@ class EvangelistStatus implements EvangelistStatusInterface
         return false;
     }
 
+    /**
+     * This method checks for null argument 
+     * @return exception
+     */
+    public function checkNullUsernameException()
+    {
+        if ($this->checkEmptyGithubUsername($this->username))
+        {
+            throw EvangelistStatusException::createEvangelistStatusException("Username is Empty, please provide a GitHub valid username");
+        }
+    }
 }  
