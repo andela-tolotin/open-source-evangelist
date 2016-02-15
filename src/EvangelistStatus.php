@@ -40,13 +40,10 @@ class EvangelistStatus implements EvangelistStatusInterface
         if ($num_args == 0 ||  $num_args > 1) {
             throw ArgumentCheckException::NullOfOverflowArgumentException("Argument missing: only one argument is allowed");
         }
-<<<<<<< HEAD
-
-=======
       
         $this->username                         = $username;
         
->>>>>>> 5ae30be3b2ebb67e6de8fe512888cf961febb1ad
+
         $this->checkNullUsernameException();
 
         $this->clientId                         = getenv('ClientID'); // get the GitHub client id
