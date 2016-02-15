@@ -45,5 +45,5 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
             return true;
         }
     }
-    
+
  }
