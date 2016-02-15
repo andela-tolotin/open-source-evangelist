@@ -19,11 +19,11 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
 {
     private $evangelist;
 	
-     /**
-      * Class Instantiation of the EvangelistStatus class
-      * @param void
-      * @return object
-      */
+    /**
+     * Class Instantiation of the EvangelistStatus class
+     * @param void
+     * @return object
+     */
     public function setUp()
     {
     	$this->evangelist = new EvangelistStatus('andela-tolotin');
