@@ -30,9 +30,8 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
     	} else if ($noOfRepo >= 21) {
     		$evangelistTypeMessage = "Yeah, I crown you Senior Evangelist. Thanks for making the world a better place";
     	} else {
-            $evangelistTypeMessage = "Fuck Off!!! Please make the world better, Oh Ye Lazy Evangelist";
-        }
-
+    	 $evangelistTypeMessage = "Fuck Off!!! Please make the world better, Oh Ye Lazy Evangelist";
+    	}
     	return $evangelistTypeMessage;
     }
 
@@ -46,7 +45,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
         if ($arrayResponse["message"] == "Not Found") {
             return true;
         }
-
     }
-
+    
  }
