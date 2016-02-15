@@ -24,5 +24,4 @@ class ArgumentCheckException extends Exception
     {
 	return new static($exception);
     }
-    
 }
