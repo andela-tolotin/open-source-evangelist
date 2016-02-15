@@ -13,7 +13,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 
  use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRankingInterface;
 
-
  class EvangelistStatusRanking implements EvangelistStatusRankingInterface
  {
     /**
@@ -46,5 +45,8 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
             return true;
         }
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5ae30be3b2ebb67e6de8fe512888cf961febb1ad
  }
