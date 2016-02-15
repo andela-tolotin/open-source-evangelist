@@ -17,7 +17,7 @@ use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatus;
 
 class EvangelistStatusExceptionTest extends PHPUnit_Framework_TestCase
 {	
-	/**
+    /**
 	 * Class Instantiation of the EvangelistStatus class
 	 */
     public function setUp()
