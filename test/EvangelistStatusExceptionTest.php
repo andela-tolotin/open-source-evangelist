@@ -11,18 +11,16 @@ namespace Laztopaz\OpenSourceEvangelistStatus\Test;
  * @license  <https://opensource.org/license/MIT> MIT
  */
 
-
 use PHPUnit_Framework_TestCase;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatus;
 
 class EvangelistStatusExceptionTest extends PHPUnit_Framework_TestCase
 {	
-	/**
-	 * Class Instantiation of the EvangelistStatus class
-	 */
+   /**
+    * Class Instantiation of the EvangelistStatus class
+    */
     public function setUp()
     {
-    	
     }
 
     /**
@@ -31,7 +29,5 @@ class EvangelistStatusExceptionTest extends PHPUnit_Framework_TestCase
     public function testGitHubUsernameEmptyException()
     {
         $evangelist = new EvangelistStatus('');
-        
     }
-    
 }
