@@ -35,14 +35,12 @@ class EvangelistStatus implements EvangelistStatusInterface
     { 
         $num_args = (int) func_num_args(); // get number of arguments passed to 
 
-        if ($num_args == 0 ||  $num_args > 1)
-        {
+        if ($num_args == 0 ||  $num_args > 1) {
             throw ArgumentCheckException::NullOfOverflowArgumentException("Argument missing: only one argument is allowed");
         }
-
-        $this->username                         = $username;
-
         $this->checkNullUsernameException();
+        
+        $this->username                         = $username;
 
         $this->clientId                         = getenv('ClientID'); // get the GitHub client id
         $this->clientSecret                     = getenv('ClientSecret'); // get the GitHub client secret
@@ -73,11 +71,9 @@ class EvangelistStatus implements EvangelistStatusInterface
     {
         $githubJson = json_decode($this->githubResponse, true);
 
-        if(EvangelistStatusRanking::checkForNullRepos($githubJson))
-        {
+        if (EvangelistStatusRanking::checkForNullRepos($githubJson)) {
             throw NullNoOfReposException::createNullReposException("Empty GitHub repository");
         }
-        
         return $githubJson['public_repos'];
     }
 
@@ -98,8 +94,7 @@ class EvangelistStatus implements EvangelistStatusInterface
      */
     public function checkEmptyGithubUsername($username)
     {
-        if ($username == "")
-        {
+        if ($username == "") {
             return true;
         }
         return false;
@@ -111,8 +106,7 @@ class EvangelistStatus implements EvangelistStatusInterface
      */
     public function checkNullUsernameException()
     {
-        if ($this->checkEmptyGithubUsername($this->username))
-        {
+        if ($this->checkEmptyGithubUsername($this->username)) {
             throw EvangelistStatusException::createEvangelistStatusException("Username is Empty, please provide a GitHub valid username");
         }
     }
