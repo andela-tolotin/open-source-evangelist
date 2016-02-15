@@ -23,7 +23,7 @@ use Exception;
 class EvangelistStatus implements EvangelistStatusInterface
 {
     protected  $githubApi;
-    private    $username;
+    public     $username;
     private    $response;
     private    $clientId;
     private    $clientSecret;
@@ -33,14 +33,15 @@ class EvangelistStatus implements EvangelistStatusInterface
 	
     public function __construct($username)
     { 
+        $this->username                         = $username;
+
         $num_args = (int) func_num_args(); // get number of arguments passed to 
 
         if ($num_args == 0 ||  $num_args > 1) {
             throw ArgumentCheckException::NullOfOverflowArgumentException("Argument missing: only one argument is allowed");
         }
+
         $this->checkNullUsernameException();
-        
-        $this->username                         = $username;
 
         $this->clientId                         = getenv('ClientID'); // get the GitHub client id
         $this->clientSecret                     = getenv('ClientSecret'); // get the GitHub client secret

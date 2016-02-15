@@ -4,9 +4,9 @@ ok 2 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::tes
 ok 3 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposGreaterThanFiveAndLessOrEqualTen
 ok 4 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposGreaterThanTenAndLessOrEqualTwenty
 ok 5 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusRankingTest::testNumberOfReposGreaterThanTwentyOne
-ok 6 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testUserNumberOfRepo
-ok 7 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitResponseData
-ok 8 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitHubUsernameEmpty
-ok 9 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testEvangelistLevel
-ok 10 - Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGetStatus
+not ok 6 - Error: Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testUserNumberOfRepo
+not ok 7 - Error: Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitResponseData
+not ok 8 - Error: Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGitHubUsernameEmpty
+not ok 9 - Error: Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testEvangelistLevel
+not ok 10 - Error: Laztopaz\OpenSourceEvangelistStatus\Test\EvangelistStatusTest::testGetStatus
 1..10
