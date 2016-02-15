@@ -15,7 +15,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
  *
  *  This interface contain methods to be implemented  
  */
-
 interface EvangelistStatusInterface
 {
     /**
@@ -23,16 +22,15 @@ interface EvangelistStatusInterface
      * @param void
      * @return void
      */
-	public function getStatus();
-
-	/**
+    public function getStatus();
+    
+    /**
      * This method returns number of the user repo on Github
      * @param void
      * @return void
      */
-	public function getNumberOfRepos();
-
-
+    public function getNumberOfRepos();
+    
     /**
      * This method returns Github data
      * @param void
