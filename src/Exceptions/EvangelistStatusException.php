@@ -16,12 +16,12 @@ use Exception;
 class EvangelistStatusException extends Exception
 {
     /**
-	 * This method return an instance of an exception
-	 * @param message
-	 * @return message
-	 */
-	public static function createEvangelistStatusException($message)
-	{
-		return new static($message);
-	}
+     * This method return an instance of an exception
+     * @param message
+     * @return message
+     */
+    public static function createEvangelistStatusException($message)
+    {
+	return new static($message);
+    }
 }

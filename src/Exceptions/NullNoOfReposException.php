@@ -16,12 +16,12 @@ use Exception;
 class NullNoOfReposException extends Exception
 {
     /**
-	 * This method return an instance of an exception
-	 * @param $exception
-	 * @return message
-	 */
-	public static function createNullReposException($exception)
-	{
-		return new static($exception);
-	}
+     * This method return an instance of an exception
+     * @param $exception
+     * @return message
+     */
+    public static function createNullReposException($exception)
+    {
+	return new static($exception);
+    }
 }

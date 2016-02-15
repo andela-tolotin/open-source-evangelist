@@ -11,7 +11,6 @@ namespace Laztopaz\OpenSourceEvangelistStatus\Test;
  * @license  <https://opensource.org/license/MIT> MIT
  */
 
-
 use PHPUnit_Framework_TestCase;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatus;
 use Laztopaz\OpenSourceEvangelistStatus\EvangelistStatusRanking;
@@ -20,11 +19,11 @@ class EvangelistStatusTest extends PHPUnit_Framework_TestCase
 {
     private $evangelist;
 	
-	/**
-	 * Class Instantiation of the EvangelistStatus class
+    /**
+     * Class Instantiation of the EvangelistStatus class
      * @param void
      * @return object
-	 */
+     */
     public function setUp()
     {
     	$this->evangelist = new EvangelistStatus('andela-tolotin');
