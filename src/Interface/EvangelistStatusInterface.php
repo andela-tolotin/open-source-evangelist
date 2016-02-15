@@ -18,7 +18,7 @@ namespace Laztopaz\OpenSourceEvangelistStatus;
 interface EvangelistStatusInterface
 {
     /**
-     *This method returns a string depending on number of user repo on Github
+     * This method returns a string depending on number of user repo on Github
      * @param void
      * @return void
      */
